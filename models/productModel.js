@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 const productSchema = new Schema({
     "name": { type: String, required: true },
     "description": { type: Date },
-    "type": { type: String },
+    "type": { type: Schema.Types.ObjectId, ref: 'ProductCategory' }, //ref of product categories
     "image": { type: Buffer }
 })
 
