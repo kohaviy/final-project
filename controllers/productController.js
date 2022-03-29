@@ -16,7 +16,7 @@ exports.getAllProducts = async(req, res) => {
     try {
         console.log("Hyushh");
         const allProducts = Product.find({});
-        res.status(200).send(allProducts);
+        res.status(200).send({ "All Product": allProducts });
     } catch (error) {
         res.send(error)
     }
