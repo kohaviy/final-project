@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 
 
-mongoose.connect("mongodb + srv: //yemimako:rnUman12@cluster0.dwgto.mongodb.net/myStore?retryWrites=true&w=majority", { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://ykohavi:psMMJtT3akvrjq6@cluster0.pss9m.mongodb.net/myStore?retryWrites=true&w=majority", { useNewUrlParser: true });
+//  mongodb+srv://ykohavi:<password>@cluster0.pss9m.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
 //checking connection
 mongoose.connection.on("connected", () => { console.log("mongoose connected") });

@@ -2,10 +2,19 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const customerSchema = new Schema({
-    "fname": { type: String },
-    "lname": { type: String },
+    "fname": {
+        type: String,
+        required: 'First name is required'
+    },
+    "lname": {
+        type: String,
+        required: 'Last name is required'
+    },
     "phone": { type: String },
-    "id": { type: String, unique: true },
+    "id": {
+        type: String,
+        unique: true
+    },
     "email": {
         type: String,
         trim: true,
