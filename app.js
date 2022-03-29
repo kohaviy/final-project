@@ -8,6 +8,8 @@ const db = require("./db");
 //const usersRouter = require('./routes/users');
 const customerRoute = require('./routes/customerRoute');
 const productsRoute = require('./routes/productsRoute');
+const productCategoryRoute = require('./routes/productCategoryRoute');
+
 
 
 const app = express();
@@ -19,6 +21,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', customerRoute);
 app.use('/products', productsRoute);
+app.use('/products', productCategoryRoute);
 
 //app.use('/', indexRouter);
 //app.use('/users', usersRouter);

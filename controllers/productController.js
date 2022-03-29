@@ -14,10 +14,10 @@ exports.creatNewProduct = async(req, res) => {
 
 exports.getAllProducts = async(req, res) => {
     try {
+        console.log("Hyushh");
         const allProducts = Product.find({});
         res.status(200).send(allProducts);
     } catch (error) {
         res.send(error)
     }
-
 }
